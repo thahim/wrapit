@@ -2,220 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>wrap.it - Elegant Gifts & Bouquets</title>
+  <title>wrap.it - Product Gallery</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff0f6;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background: #ffd9e8;
-      padding: 20px 40px;
+      background-color: #ffe6f0;
+      padding: 20px;
       text-align: center;
-      font-size: 2em;
-      font-weight: 700;
-      color: #b30059;
-      font-family: 'Segoe UI Black', sans-serif;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #ffbbe6;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 20px;
-      color: #660033;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1em;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #b30059;
+    h1 {
+      margin: 0;
+      color: #d63384;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      padding: 20px;
     }
-    .product-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(179, 0, 89, 0.2);
+    .item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
     }
-    .product-card:hover {
-      transform: scale(1.03);
-    }
-    .product-card img {
+    .item img {
       width: 100%;
-      height: 160px;
-      object-fit: cover;
-      display: block;
+      height: auto;
+      border-radius: 10px;
     }
-    .product-name {
-      font-weight: 700;
-      padding: 10px 15px 5px;
-      color: #99004d;
-      font-size: 1.1em;
+    .name {
+      font-weight: bold;
+      margin: 10px 0 5px;
+      color: #c2185b;
     }
-    .product-price {
-      padding: 0 15px 15px;
-      font-weight: 600;
-      color: #cc0066;
-      font-size: 1em;
+    .price {
+      color: #555;
     }
-    #contact {
-      background: #ffe6f0;
-      border-radius: 12px;
-      padding: 25px 40px;
-      max-width: 600px;
-      margin: 0 auto 60px;
-      box-shadow: 0 3px 10px rgba(179, 0, 89, 0.15);
-      color: #660033;
-      font-size: 1.1em;
-      line-height: 1.6em;
+    .contact {
+      background-color: #fff8fb;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #f8c6dc;
+    }
+    .contact h2 {
+      color: #d63384;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     footer {
       text-align: center;
-      padding: 15px;
-      background: #ffd9e8;
-      font-weight: 600;
-      color: #b30059;
-      font-size: 0.9em;
+      padding: 10px;
+      background-color: #ffe6f0;
+      color: #777;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      color: #888;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <header>wrap.it</header>
-  <nav>
-    <a href="#gallery">Gallery & Prices</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header>
+    <h1>wrap.it - Product Gallery</h1>
+  </header>
 
-  <section id="gallery">
-    <h2>Gallery & Prices</h2>
-    <div class="gallery">
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0012.jpg" alt="Cake box and bouque" />
-        <div class="product-name">Cake box and bouque</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0001.jpg" alt="Kitkat bouquet" />
-        <div class="product-name">Kitkat bouquet</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0007.jpg" alt="Can basket" />
-        <div class="product-name">Can basket</div>
-        <div class="product-price">Rs 7000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
-        <div class="product-name">Flower bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0008.jpg" alt="Favour box" />
-        <div class="product-name">Favour box</div>
-        <div class="product-price">Rs 7000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0005.jpg" alt="Large size crate with bouque" />
-        <div class="product-name">Large size crate with bouque</div>
-        <div class="product-price">Rs 20000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0002.jpg" alt="Box bouquet" />
-        <div class="product-name">Box bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0010.jpg" alt="Acrylic cake box" />
-        <div class="product-name">Acrylic cake box</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0009.jpg" alt="Confetti balloon basket" />
-        <div class="product-name">Confetti balloon basket</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
-        <div class="product-name">Flower bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
-        <div class="product-name">Flower bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0013.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0014.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0016.jpg" alt="Acrylic bag" />
-        <div class="product-name">Acrylic bag</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0009.jpg" alt="Wooden crate" />
-        <div class="product-name">Wooden crate</div>
-        <div class="product-price">Rs 15000</div>
-      </div>
-
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0015.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-
+  <div class="gallery">
+    <div class="item" onclick="showModal('Favour box', 'Rs 8000', 'https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0000.jpg')">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0000.jpg" />
+      <div class="name">Favour box</div>
+      <div class="price">Rs 8000</div>
     </div>
-  </section>
+    <!-- Add more items in same format -->
+  </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
+  <div class="contact">
+    <h2>Contact Us</h2>
     <p>Email: <a href="mailto:aishaabdulsalam006@gmail.com">aishaabdulsalam006@gmail.com</a></p>
-    <p>Phone: <a href="tel:+923322402827">03322402827</a></p>
-  </section>
+    <p>Phone: <a href="tel:+923322402827">0332 2402827</a></p>
+  </div>
 
-  <footer>AST Developers</footer>
+  <a class="whatsapp-float" href="https://wa.me/923322402827" target="_blank" title="Chat on WhatsApp">
+    &#128222;
+  </a>
+
+  <footer>© wrap.it | AST Developers</footer>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <h3 id="modalName"></h3>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
+
+  <script>
+    function showModal(name, price, imageUrl) {
+      document.getElementById("modalName").innerText = name;
+      document.getElementById("modalPrice").innerText = price;
+      document.getElementById("modalImage").src = imageUrl;
+      document.getElementById("myModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
 </body>
 </html>
+
