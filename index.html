@@ -1,195 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>wrap.it</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #ffe6f0;
-      color: #d63384;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    nav {
-      background: #fff0f5;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #d63384;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .product-card {
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 10px;
-      text-align: center;
-      background: #fff0f5;
-    }
-    .product-card img {
-      width: 100%;
-      border-radius: 8px 8px 0 0;
-      display: block;
-      margin-bottom: 8px;
-    }
-    .product-name {
-      font-weight: 600;
-      color: #d63384;
-      margin-bottom: 4px;
-    }
-    .product-price {
-      color: #555;
-      font-weight: bold;
-    }
-    footer {
-      background: #ffe6f0;
-      text-align: center;
-      padding: 15px;
-      color: #555;
-      margin-top: 30px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    wrap.it
-  </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#gallery">Gallery & Prices</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="home">
-    <h2>Welcome to wrap.it</h2>
-    <p>We specialize in beautifully wrapping gifts for all occasions. Explore our gallery to see our latest designs and price options.</p>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery & Prices</h2>
-    <div class="gallery">
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0000.jpg" alt="Bouquet" />
-        <div class="product-name">Bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0001.jpg" alt="Kitkat bouquet" />
-        <div class="product-name">Kitkat bouquet</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0002.jpg" alt="Box bouquet" />
-        <div class="product-name">Box bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
-        <div class="product-name">Flower bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0004.jpg" alt="Dry fruit acrylic platter" />
-        <div class="product-name">Dry fruit acrylic platter</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0005.jpg" alt="Wooden crate with Ferrero bouquet" />
-        <div class="product-name">Wooden crate with Ferrero bouquet</div>
-        <div class="product-price">Rs 20000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0006.jpg" alt="Confetti balloon basket" />
-        <div class="product-name">Confetti balloon basket</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0007.jpg" alt="Can eid basket" />
-        <div class="product-name">Can eid basket</div>
-        <div class="product-price">Rs 7000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0008.jpg" alt="Box favour" />
-        <div class="product-name">Box favour</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0009.jpg" alt="Large wooden crate" />
-        <div class="product-name">Large wooden crate</div>
-        <div class="product-price">Rs 15000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0010.jpg" alt="Acrylic cake box" />
-        <div class="product-name">Acrylic cake box</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0011.jpg" alt="Wooden dry fruit platter" />
-        <div class="product-name">Wooden dry fruit platter</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0012.jpg" alt="Cake and bouquet" />
-        <div class="product-name">Cake and bouquet</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0013.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0014.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0015.jpg" alt="Customised mug" />
-        <div class="product-name">Customised mug</div>
-        <div class="product-price">Rs 1000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0016.jpg" alt="Acrylic bag" />
-        <div class="product-name">Acrylic bag</div>
-        <div class="product-price">Rs 8000</div>
-      </div>
-      <div class="product-card">
-        <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0017.jpg" alt="Large acrylic bag" />
-        <div class="product-name">Large acrylic bag</div>
-        <div class="product-price">Rs 10000</div>
-      </div>
+<section id="gallery">
+  <h2>Gallery & Prices</h2>
+  <div class="gallery">
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0004.jpg" alt="Wooden dry fruit platter" />
+      <div class="product-name">Wooden dry fruit platter</div>
+      <div class="product-price">Rs 8000</div>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:aishaabdulsalam006@gmail.com">aishaabdulsalam006@gmail.com</a></p>
-    <p>Phone: <a href="tel:03322402827">0332 2402827</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 wrap.it | Developed by AST Developers
-  </footer>
-</body>
-</html>
-
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0005.jpg" alt="Wooden crate with bouquet" />
+      <div class="product-name">Wooden crate with bouquet</div>
+      <div class="product-price">Rs 20000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0016.jpg" alt="Acrylic bag" />
+      <div class="product-name">Acrylic bag</div>
+      <div class="product-price">Rs 7000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
+      <div class="product-name">Flower bouquet</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0012.jpg" alt="Cake box and bouquet" />
+      <div class="product-name">Cake box and bouquet</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0001.jpg" alt="Kitkat bouquet" />
+      <div class="product-name">Kitkat bouquet</div>
+      <div class="product-price">Rs 10000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0013.jpg" alt="Customised mug" />
+      <div class="product-name">Customised mug</div>
+      <div class="product-price">Rs 1000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0014.jpg" alt="Customised mug" />
+      <div class="product-name">Customised mug</div>
+      <div class="product-price">Rs 1000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0015.jpg" alt="Customised mug" />
+      <div class="product-name">Customised mug</div>
+      <div class="product-price">Rs 1000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0003.jpg" alt="Flower bouquet" />
+      <div class="product-name">Flower bouquet</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0009.jpg" alt="Large wooden crate" />
+      <div class="product-name">Large wooden crate</div>
+      <div class="product-price">Rs 15000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0006.jpg" alt="Acrylic dry fruit platter" />
+      <div class="product-name">Acrylic dry fruit platter</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0008.jpg" alt="Favour box" />
+      <div class="product-name">Favour box</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0002.jpg" alt="Bouquet box" />
+      <div class="product-name">Bouquet box</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0010.jpg" alt="Acrylic cake box" />
+      <div class="product-name">Acrylic cake box</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0007.jpg" alt="Confetti balloon basket" />
+      <div class="product-name">Confetti balloon basket</div>
+      <div class="product-price">Rs 10000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0007.jpg" alt="Can basket" />
+      <div class="product-name">Can basket</div>
+      <div class="product-price">Rs 8000</div>
+    </div>
+    <div class="product-card">
+      <img src="https://raw.githubusercontent.com/thahim/wrapit/main/IMG-20250518-WA0017.jpg" alt="Large Acrylic bag" />
+      <div class="product-name">Large Acrylic bag</div>
+      <div class="product-price">Rs 10000</div>
+    </div>
+  </div>
+</section>
